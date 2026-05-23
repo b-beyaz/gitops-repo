@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: kubesage
-        image: aysebeyaz/kubesage:latest
+        image: aysebeyaz/kubesage:abd8b81
         ports:
         - containerPort: 8501
         env:
