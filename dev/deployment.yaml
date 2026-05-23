@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubesage
+  namespace: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kubesage
+  template:
+    metadata:
+      labels:
+        app: kubesage
+    spec:
+      containers:
+      - name: kubesage
+        image: aysebeyaz/kubesage:latest
+        ports:
+        - containerPort: 8501
+        env:
+        - name: ANTHROPIC_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: kubesage-secrets
+              key: anthropic-api-key
