@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/b-beyaz/git-ops.git
+    repoURL: https://github.com/b-beyaz/gitops-repo.git
     targetRevision: HEAD
     path: dev
   destination:
